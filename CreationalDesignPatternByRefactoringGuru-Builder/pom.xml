@@ -3,7 +3,8 @@
   <groupId>DesignPatternByRefactoringGuru</groupId>
   <artifactId>DesignPatternByRefactoringGuru</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
+    <packaging>pom</packaging>
+    <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
