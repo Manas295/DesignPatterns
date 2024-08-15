@@ -1,0 +1,36 @@
+Adapter design pattern is one of the structural design pattern and it is used so that two 
+unrelated interfaces can work together.
+
+Usage examples: The Adapter pattern is pretty common in Java code. 
+It’s very often used in systems based on some legacy code. 
+In such cases, Adapters make legacy code work with modern classes.
+----------------------------------------------------------------------
+There are some standard Adapters in Java core libraries:
+
+java.util.Arrays#asList()
+java.util.Collections#list()
+java.util.Collections#enumeration()
+java.io.InputStreamReader(InputStream) (returns a Reader object)
+java.io.OutputStreamWriter(OutputStream) (returns a Writer object)
+javax.xml.bind.annotation.adapters.XmlAdapter#marshal() and #unmarshal()
+
+-----------------------------------------------------------------------
+Identification: Adapter is recognizable by a constructor which takes an instance of a 
+different abstract/interface type. When the adapter receives a call to any of its methods, 
+it translates parameters to the appropriate format and then directs the call to one or several 
+methods of the wrapped object.
+
+-----------------------------------------------------------------------
+The Components of the Adapter Design Pattern -:
+The Adapter pattern involves three main components -:
+
+a) Target: This represents the interface or class that the client code expects to work with. 
+   It defines the operations that the client can use.
+
+b) Adaptee: This refers to the existing class or interface that needs to be adapted. 
+   It has a different interface that is incompatible with the client’s expectations.
+
+c) Adapter: This is the class that bridges the gap between the Target and Adaptee. 
+   It implements the Target interface and internally uses an instance of the Adaptee 
+   to perform the desired operations. The Adapter class acts as a wrapper or translator, 
+   adapting the Adaptee’s interface to match the Target interface.
